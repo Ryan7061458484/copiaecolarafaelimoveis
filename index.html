@@ -17,16 +17,35 @@
       color: white;
       border: none;
       cursor: pointer;
+      border-radius: 5px;
+      /* Adicionando a animação de pulsação */
+      animation: pulsar 1.5s infinite;
     }
     .copy-btn:hover {
       background-color: #45a049;
+    }
+
+    /* Definindo a animação de pulsação */
+    @keyframes pulsar {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
     }
   </style>
 </head>
 <body>
 
-<h2>00020126360014br.gov.bcb.pix0114061361240001855204000053039865802BR5901N6001C62070503***63048E16</h2>
-<p id="chave"00020126360014br.gov.bcb.pix0114061361240001855204000053039865802BR5901N6001C62070503***63048E16</p>
+<h2>Copiar Chave</h2>
+<p id="chave">00020126360014br.gov.bcb.pix0114061361240001855204000053039865802BR5901N6001C62070503***63048E16</p>
 <button class="copy-btn" onclick="copiarChave()">Copiar Chave</button>
 
 <script>
