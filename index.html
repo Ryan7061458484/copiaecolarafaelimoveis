@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copiar Chave</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    .copy-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Copiar Chave</h2>
+<p id="chave">SUA_CHAVE_AQUI</p>
+<button class="copy-btn" onclick="copiarChave()">Copiar Chave</button>
+
+<script>
+  function copiarChave() {
+    const chave = document.getElementById('chave').textContent;
+    navigator.clipboard.writeText(chave).then(() => {
+      alert('Chave copiada: ' + chave);
+    }).catch(err => {
+      alert('Falha ao copiar a chave');
+    });
+  }
+</script>
+
+</body>
+</html>
